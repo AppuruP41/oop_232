@@ -1,0 +1,33 @@
+1. What class should implement the Comparable interface?
+- Because using comparable we can use only one comparison. Whereas, we can write more than one custom comparators as you want for a given type, all using different interpretations of what sorting means. So if a class that need sort by just one attribute we using the comparable.
+
+2. In those classes, how should you implement the compareTo()method to reflect the ordering that we want?
+- We implement the Comparable and use it nature sorting methods with the Collenctions.sort(list) 
+
+3. Can we have two ordering rules of the item (by title then cost and by cost then title) if we use this Comparable interface approach?
+- We can not have two ordering rules of the item if we use this Comparable interface approach as it only use one comparison
+
+4. Suppose the DVDs have a different ordering rule from the other media types, that is by title, then decreasing length, then cost. How would you modify your code to allow this?
+- We use the Comparator Class and overwrite it compare method
+import java.util.Comparator;
+
+class CombinedComparator implements Comparator<CartItem> {
+    @Override
+    public int compare(CartItem item1, CartItem item2) {
+        // Compare by title
+        int titleComparison = item1.getTitle().compareTo(item2.getTitle());
+        if (titleComparison != 0) {
+            return titleComparison;
+        } else {
+            // If titles are the same, compare by decreasing length
+            if (item1 instanceof DVDItem && item2 instanceof DVDItem) {
+                // Compare DVDs by decreasing length
+                return Integer.compare(((DVDItem) item2).getLength(), ((DVDItem) item1).getLength());
+            } else {
+                // For non-DVD items, treat them as equal in length
+                // Compare by cost if they are not DVDs or if both are DVDs with the same length
+                return Double.compare(item1.getCost(), item2.getCost());
+            }
+        }
+    }
+}

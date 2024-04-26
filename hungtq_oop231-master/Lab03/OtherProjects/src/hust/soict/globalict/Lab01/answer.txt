@@ -1,0 +1,5 @@
+# hungtq_oop
+
+6.1 
+    - If user choose Cancel, the response is user choose NO
+    - We can customize the options by create Object options ( check my code at "ChoosingOption.java)

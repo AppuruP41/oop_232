@@ -1,0 +1,32 @@
+1. What is the advantages of Polymorphism?
+- Polymorphism provides many advantages that can improve the readability, maintainability, and efficiency of code, such as:
+
+- Code Reusability: Polymorphism provides the reuse of code, as 
+   methods with the same name can be used in different classes.
+
+- Flexibility and Dynamism: Polymorphism allows for more flexible and dynamic code, 
+   where the behaviour of an object can change at runtime depending on the context in which it is being used. 
+
+- Reduced Complexity: It can reduce the complexity of code by allowing the use of the 
+   same method name for related functionality, making the code easier to read and maintain.
+
+- Simplified Coding: Polymorphism simplifies coding by reducing the number of methods 
+   and constructors that need to be written.
+
+- Better Organization: Polymorphism allows for better organization of code by grouping
+   related functionality in one class.
+
+- Code Extensibility: Polymorphism enables code extensibility, as new subclasses can
+   be created to extend the functionality of the superclass without modifying the existing code.
+
+- Increased Efficiency: Compile-time polymorphism can lead to more efficient coding.
+   The compiler can choose the appropriate method to call at compile time, based on 
+   the number, types, and order of arguments passed to it.
+   
+2. How is inheritance useful when using polymorphism in java?
+-	Inheritance is a powerful feature in Java. Java Inheritance lets one class acquire the properties 
+	and attributes of another class. 
+-	Polymorphism in Java allows us to use these inherited properties to perform different tasks. 
+-	Thus, allowing us to achieve the same action in many different ways
+
+3.
